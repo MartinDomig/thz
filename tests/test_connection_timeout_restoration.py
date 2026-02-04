@@ -208,7 +208,7 @@ class TestConnectionTimeoutEdgeCases:
         device.ser = mock_socket
 
         # Call _is_connection_alive
-        result = device._is_connection_alive()
+        device._is_connection_alive()
 
         # Verify timeout was restored to 0.0
         mock_socket.settimeout.assert_called_with(0.0)

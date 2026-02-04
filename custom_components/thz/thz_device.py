@@ -170,8 +170,7 @@ class THZDevice:
                     # No data available but connection is alive
                     pass
                 except (OSError, socket.error):
-                    # Connection is broken - restore timeout before returning
-                    self.ser.settimeout(original_timeout)
+                    # Connection is broken
                     return False
                 finally:
                     # Always restore the original timeout
@@ -418,10 +417,9 @@ class THZDevice:
         # This is more robust when modules are mocked in tests
         if hasattr(self.ser, 'recv') and hasattr(self.ser, 'setblocking'):
             # This is a socket
-            original_timeout = None
+            # Save original timeout to restore after reading
+            original_timeout = self.ser.gettimeout()
             try:
-                # Save original timeout to restore after reading
-                original_timeout = self.ser.gettimeout()
                 self.ser.setblocking(False)
                 data = self.ser.recv(1024)
                 if not data and hasattr(self.ser, 'fileno') and self.ser.fileno() == -1:
@@ -436,12 +434,11 @@ class THZDevice:
                 raise ConnectionError(f"TCP connection error: {e}") from e
             finally:
                 # Always restore the original timeout
-                if original_timeout is not None:
-                    try:
-                        self.ser.settimeout(original_timeout)
-                    except (OSError, socket.error):
-                        # Socket may be in bad state, ignore
-                        pass
+                try:
+                    self.ser.settimeout(original_timeout)
+                except (OSError, socket.error):
+                    # Socket may be in bad state, ignore
+                    pass
         elif hasattr(self.ser, 'in_waiting') and hasattr(self.ser, 'read'):
             # This is serial
             waiting = getattr(self.ser, "in_waiting", 0)

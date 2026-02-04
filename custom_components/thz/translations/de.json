@@ -99,7 +99,7 @@
         "name": "Ofen/Kamin"
       },
       "stb": {
-        "name": "STB"
+        "name": "Sicherheits-Temperaturbegrenzer"
       },
       "output_ventilator_power": {
         "name": "Abluftventilator Leistung"
@@ -162,37 +162,37 @@
         "name": "Luftfeuchtigkeit Abluft"
       },
       "heat_set_temp": {
-        "name": "Heat Setpoint Temperature"
+        "name": "Heiz Solltemperatur"
       },
       "heat_temp": {
-        "name": "Heat Temperature"
+        "name": "Heiztemperatur"
       },
       "room_set_temp": {
-        "name": "Room Setpoint Temperature"
+        "name": "Raum Solltemperatur"
       },
       "inside_temp_rc": {
-        "name": "Inside Temperature (Room Controller)"
+        "name": "Innentemperatur Kontrolleinheit"
       },
       "season_mode": {
-        "name": "Season Mode"
+        "name": "Jahreszeitenmodus"
       },
       "hc_op_mode": {
-        "name": "Heating Circuit Operating Mode"
+        "name": "Heizkreis Betriebsart"
       },
       "integral_heat": {
-        "name": "Integral Heat"
+        "name": "Integral Wärme"
       },
       "integral_switch": {
-        "name": "Integral Switch"
+        "name": "Integral Schalter"
       },
       "on_hysteresis_no": {
-        "name": "On Hysteresis Number"
+        "name": "An Hysterese"
       },
       "off_hysteresis_no": {
-        "name": "Off Hysteresis Number"
+        "name": "Aus Hysterese"
       },
       "hc_booster_stage": {
-        "name": "Heating Circuit Booster Stage"
+        "name": "Heizkreis Zusatzheizung Stufe"
       }
     },
     "number": {

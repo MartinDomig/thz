@@ -112,7 +112,7 @@
         "name": "Oven/Fireplace"
       },
       "stb": {
-        "name": "STB"
+        "name": "Safety Temperature Limiter"
       },
       "output_ventilator_power": {
         "name": "Output Ventilator Power"

@@ -156,6 +156,9 @@ class THZDevice:
                 if self.ser.fileno() == -1:
                     return False
 
+                # Save original timeout to restore after the check
+                original_timeout = self.ser.gettimeout()
+
                 # Try a quick peek without blocking to detect closed connections
                 # This is a best-effort check; MSG_PEEK may not work on all platforms
                 self.ser.setblocking(False)
@@ -169,6 +172,13 @@ class THZDevice:
                 except (OSError, socket.error):
                     # Connection is broken
                     return False
+                finally:
+                    # Always restore the original timeout
+                    try:
+                        self.ser.settimeout(original_timeout)
+                    except (OSError, socket.error):
+                        # Socket may be in bad state, ignore
+                        pass
 
                 return True
             except (OSError, socket.error, AttributeError):
@@ -407,6 +417,8 @@ class THZDevice:
         # This is more robust when modules are mocked in tests
         if hasattr(self.ser, 'recv') and hasattr(self.ser, 'setblocking'):
             # This is a socket
+            # Save original timeout to restore after reading
+            original_timeout = self.ser.gettimeout()
             try:
                 self.ser.setblocking(False)
                 data = self.ser.recv(1024)
@@ -420,6 +432,13 @@ class THZDevice:
                 # Connection reset, broken pipe, or other socket errors
                 _LOGGER.error("TCP socket error during read: %s", e)
                 raise ConnectionError(f"TCP connection error: {e}") from e
+            finally:
+                # Always restore the original timeout
+                try:
+                    self.ser.settimeout(original_timeout)
+                except (OSError, socket.error):
+                    # Socket may be in bad state, ignore
+                    pass
         elif hasattr(self.ser, 'in_waiting') and hasattr(self.ser, 'read'):
             # This is serial
             waiting = getattr(self.ser, "in_waiting", 0)

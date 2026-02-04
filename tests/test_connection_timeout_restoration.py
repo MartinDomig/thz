@@ -6,7 +6,7 @@ the connection loss issue after ~20 hours.
 """
 
 import socket
-from unittest.mock import Mock, patch
+from unittest.mock import Mock
 
 import pytest
 

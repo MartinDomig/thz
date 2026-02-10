@@ -193,6 +193,78 @@
       },
       "hc_booster_stage": {
         "name": "Heizkreis Zusatzheizung Stufe"
+      },
+      "pump_hc": {
+        "name": "Heizkreispumpe"
+      },
+      "vent_stage": {
+        "name": "Lüftungsstufe"
+      },
+      "switching_prog": {
+        "name": "Schaltprogramm"
+      },
+      "filter_both": {
+        "name": "Filter Beide"
+      },
+      "filter_up": {
+        "name": "Filter Oben"
+      },
+      "filter_down": {
+        "name": "Filter Unten"
+      },
+      "defrost": {
+        "name": "Abtauung"
+      },
+      "cooling": {
+        "name": "Kühlung"
+      },
+      "heating_dhw": {
+        "name": "Warmwasserbereitung"
+      },
+      "heating_hc": {
+        "name": "Heizkreis Heizung"
+      },
+      "booster_hc": {
+        "name": "Heizkreis Zusatzheizung"
+      },
+      "dhw_booster_stage": {
+        "name": "Warmwasser Zusatzheizung Stufe"
+      },
+      "dhw_op_mode": {
+        "name": "Warmwasser Betriebsart"
+      },
+      "dhw_set_temp": {
+        "name": "Warmwasser Solltemperatur"
+      },
+      "dhw_stage": {
+        "name": "Warmwasser Stufe"
+      },
+      "heat_request": {
+        "name": "Wärmeanforderung"
+      },
+      "heat_request_2": {
+        "name": "Wärmeanforderung 2"
+      },
+      "defrost_evaporator": {
+        "name": "Verdampfer Abtauung"
+      },
+      "pasteurisation_mode": {
+        "name": "Pasteurisierungsmodus"
+      },
+      "boost_block_time_after_hd": {
+        "name": "Zusatzheizung Sperrzeit nach HD"
+      },
+      "comp_block_time": {
+        "name": "Kompressor Sperrzeit"
+      },
+      "heat_block_time": {
+        "name": "Heizung Sperrzeit"
+      },
+      "sensor_bits_1": {
+        "name": "Sensorbits 1"
+      },
+      "sensor_bits_2": {
+        "name": "Sensorbits 2"
       }
     },
     "number": {

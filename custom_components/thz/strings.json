@@ -262,7 +262,7 @@
         "name": "Defrost Evaporator"
       },
       "pasteurisation_mode": {
-        "name": "Pasteurisation Mode"
+        "name": "Pasteurization Mode"
       },
       "boost_block_time_after_hd": {
         "name": "Boost Block Time After HD"

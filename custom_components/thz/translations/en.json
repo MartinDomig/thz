@@ -206,6 +206,78 @@
       },
       "hc_booster_stage": {
         "name": "Heating Circuit Booster Stage"
+      },
+      "pump_hc": {
+        "name": "Heating Circuit Pump"
+      },
+      "vent_stage": {
+        "name": "Ventilation Stage"
+      },
+      "switching_prog": {
+        "name": "Switching Program"
+      },
+      "filter_both": {
+        "name": "Filter Both"
+      },
+      "filter_up": {
+        "name": "Filter Up"
+      },
+      "filter_down": {
+        "name": "Filter Down"
+      },
+      "defrost": {
+        "name": "Defrost"
+      },
+      "cooling": {
+        "name": "Cooling"
+      },
+      "heating_dhw": {
+        "name": "Heating DHW"
+      },
+      "heating_hc": {
+        "name": "Heating HC"
+      },
+      "booster_hc": {
+        "name": "Booster HC"
+      },
+      "dhw_booster_stage": {
+        "name": "DHW Booster Stage"
+      },
+      "dhw_op_mode": {
+        "name": "DHW Operating Mode"
+      },
+      "dhw_set_temp": {
+        "name": "DHW Set Temperature"
+      },
+      "dhw_stage": {
+        "name": "DHW Stage"
+      },
+      "heat_request": {
+        "name": "Heat Request"
+      },
+      "heat_request_2": {
+        "name": "Heat Request 2"
+      },
+      "defrost_evaporator": {
+        "name": "Defrost Evaporator"
+      },
+      "pasteurisation_mode": {
+        "name": "Pasteurization Mode"
+      },
+      "boost_block_time_after_hd": {
+        "name": "Boost Block Time After HD"
+      },
+      "comp_block_time": {
+        "name": "Compressor Block Time"
+      },
+      "heat_block_time": {
+        "name": "Heat Block Time"
+      },
+      "sensor_bits_1": {
+        "name": "Sensor Bits 1"
+      },
+      "sensor_bits_2": {
+        "name": "Sensor Bits 2"
       }
     },
     "number": {

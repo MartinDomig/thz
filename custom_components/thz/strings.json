@@ -141,17 +141,17 @@
       "dew_point": {
         "name": "Dew Point"
       },
-      "power_nd": {
-        "name": "Power Nd"
+      "pressure_nd": {
+        "name": "Low Pressure Side"
       },
-      "power_hd": {
-        "name": "Power Hd"
+      "pressure_hd": {
+        "name": "High Pressure Side"
       },
       "actual_power_qc": {
-        "name": "Actual Power Qc"
+        "name": "Actual Thermal Power"
       },
       "actual_power_pel": {
-        "name": "Actual Power Pel"
+        "name": "Actual Electric Power"
       },
       "collector_temp": {
         "name": "Collector Temperature"

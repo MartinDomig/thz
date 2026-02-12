@@ -128,17 +128,17 @@
       "dew_point": {
         "name": "Taupunkt"
       },
-      "power_nd": {
-        "name": "Leistung Nd"
+      "pressure_nd": {
+        "name": "Druck Niederdruckseite"
       },
-      "power_hd": {
-        "name": "Leistung Hd"
+      "pressure_hd": {
+        "name": "Druck Hochdruckseite"
       },
       "actual_power_qc": {
-        "name": "Aktuelle Leistung Qc"
+        "name": "Aktuelle Wärmeleistung"
       },
       "actual_power_pel": {
-        "name": "Aktuelle Leistung Pel"
+        "name": "Aktuelle Leistung elektrisch"
       },
       "collector_temp": {
         "name": "Kollektortemperatur"

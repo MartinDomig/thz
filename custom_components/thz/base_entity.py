@@ -55,6 +55,7 @@ class THZBaseEntity(Entity):
         self._device = device
         self._device_id = device_id
         self._attr_icon = icon or "mdi:eye"
+        self._entity_name = name  # always available for logging / fallback
 
         # Per Home Assistant documentation, has_entity_name=True is MANDATORY for new integrations.
         # See: https://developers.home-assistant.io/docs/core/entity/#entity-naming

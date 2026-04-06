@@ -78,6 +78,9 @@ async def async_setup_entry(
         block_hex = block.removeprefix("pxx")  # Remove "pxx" prefix
         block_bytes = bytes.fromhex(block_hex)
         for name, offset, length, decode_type, factor in entries:
+            # Skip sensors explicitly disabled in firmware-specific register maps
+            if decode_type == "disabled":
+                continue
             # Strip whitespace and trailing colons from sensor name
             sensor_name = name.strip().rstrip(':')
 
